@@ -8,6 +8,9 @@ require 'rake/contrib/rubyforgepublisher'
 require 'fileutils'
 require File.join(File.dirname(__FILE__), 'lib', 'action_web_service', 'version')
 
+require 'bundler'
+Bundler::GemHelper.install_tasks
+
 PKG_BUILD     = ENV['PKG_BUILD'] ? '.' + ENV['PKG_BUILD'] : ''
 PKG_NAME      = 'actionwebservice'
 PKG_VERSION   = ActionWebService::VERSION::STRING + PKG_BUILD
