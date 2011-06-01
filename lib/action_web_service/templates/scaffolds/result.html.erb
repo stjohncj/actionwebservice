@@ -1,7 +1,7 @@
 <h4>Method Invocation Result for <em><%= @scaffold_service %>#<%= @scaffold_method.public_name %></em></h4>
 
 <p>
-Invocation took <tt><%= '%f' % @method_elapsed %></tt> seconds
+Invocation took <tt><%= @method_elapsed.nil? ? 'nil!' : '%f' % @method_elapsed %></tt> seconds
 </p>
 
 <p>
